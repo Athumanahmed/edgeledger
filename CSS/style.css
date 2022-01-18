@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Titillium+Web:wght@300&display=swap');
+
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* end of reset */
+body{
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.4;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin: 0.75rem 0;
+}
+
+/* end of reset */
+
+/* utilities */
+
+.container{
+    max-width: 1100px;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin: auto;
+
+}
+
+.py-1 {padding: 1.5rem 0;}
+.py-2 {padding: 2rem 0;}
+.py-3 {padding: 3rem 0;}
+
+.p-1 {padding: 1.5rem;}
+.p-2 {padding: 2rem;}
+.p-3 {padding: 3rem;}
+
+.list{
+    margin: 0.5rem 0;
+}
+
+.list li{
+    padding: 0.5rem 0;
+    border: #444 dotted 1px;
+    list-style: none;
+}
+.text-primary{
+    color: chartreuse;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.l-heading{
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom:0.75rem;
+}
+
+
+.m-heading{
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom:0.75rem;
+}
+
+.lead{
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.btn{
+    display: inline-block;
+    background: greenyellow;
+    color: black;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    font-weight: 900;
+    margin-top: 0.75rem;
+    border: none;
+    
+}
+
+.btn:hover{
+    background: rgb(56, 238, 56);
+}
+
+.bg-dark{
+    background: #333;
+    color: #fff;
+}
+/* end of utilities */
+
+/* navbar */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: #333;
+    color: white;
+    z-index: 1;
+    padding: 1rem;
+}
+
+#navbar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navbar ul li a{
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover{
+    background: rgb(21, 201, 21);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+/* end of navbar */
+
+/* showcase */
+#showcase{
+    background: #333 url(../IMG/showcase.jpg) no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+}
+
+#showcase .showcase-content{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ height: 100%;
+ padding: 0 2rem;
+   
+ /* overlay */
+ position: absolute;
+ background: #333 rgba(0, 0, 0, 0.9);
+ top: 60px;
+ left: 0;
+ right: 0;
+ bottom: 0;
+}
+
+
+
+/* end of showcase */
+
+/* what we do */
+.bg-light{
+    background: rgb(241, 239, 239);
+}
+.items{
+    display: flex;
+    padding: 1rem;
+}
+ #what .item{
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+}
+
+#what .items .item i{
+    background: chartreuse;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+#what .items .item h3{
+    padding-top: 0.75rem;
+}
+
+#what .items .item p{
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+/*end of what we do  */
+
+/* who we are */
+#who{
+    display: flex;
+
+}
+
+#who div{
+    flex: 1;
+}
+
+#who .who-img {
+    background: url('../IMG/people.jpg') no-repeat center center/cover;
+}
+/* end of who we are */
+
+/* clients */
+#clients{
+    display: flex;
+    background: #f4f4f4;
+}
+
+#clients .items img{
+    margin: auto;
+    width: 60%;
+    display: block;
+}
+/* end of clients */
+
+/* contact */
+#contact  label{
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+#contact  input,
+#contact textarea
+{
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    width: 100%;
+}
+/* end of contact */
+
+/* footer */
+#mainfooter{
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+/* end of footer */
+
+/* media queries................. */
+
+/* widescreen and tablets */
+@media (min-width:1100px){
+    #what .items .item{
+        display: flex;
+    }
+
+    #what .items .item i{
+        align-self: center;
+    }
+
+   
+}
+
+
+@media(max-width:768px){
+    #what .items{
+        display: block;
+    }
+
+    #what .items .item{
+        display: flex;
+    }
+
+    #what .items .item i{
+        align-self: center;
+    }
+}
+
+/* smartphones */
+@media(max-width:500px){
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar h1{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    #who{
+        display: block;
+    }
+
+    #Who-img{
+        display: none;
+    } 
+
+    #clients .items img{
+        width: 80%;
+    }
+
+    #clients .items div:last-child{
+        display: none;
+    }
+}
+/* end of media queries................. */
